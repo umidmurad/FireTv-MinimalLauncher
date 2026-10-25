@@ -1,0 +1,30 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'dev.umid.firetvlauncher'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId 'dev.umid.firetvlauncher'
+        minSdk 22
+        targetSdk 28
+        versionCode 1
+        versionName '1.0.0'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    // This is a sideload-only Fire OS app. Target 28 preserves the tested Fire OS 6
+    // background-service and overlay behavior; it is not intended for Google Play.
+    lint {
+        disable 'ExpiredTargetSdkVersion'
+    }
+}

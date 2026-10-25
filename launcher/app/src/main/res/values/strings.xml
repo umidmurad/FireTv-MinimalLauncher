@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Minimal Home</string>
+    <string name="home_redirect_label">Minimal Home button redirect</string>
+    <string name="home_redirect_description">Redirects the protected Amazon Home screen to Minimal Home. Runs locally and uses no network access.</string>
+    <string name="opening">Opening…</string>
+    <string name="menu_settings">MENU  Settings</string>
+</resources>
